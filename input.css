@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*----- Custom Styles -----*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("../imgs/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 110% -20%;
+}
+
+@media (min-width: 374px) and (max-width: 768px) {
+  body {
+    background-image: url("../imgs/bg-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 10% -10%;
+  }
+}
+
+/*----- CTA Section -----*/
+#cta {
+  background-image: url("../imgs/bg-simplify-section.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 700px) {
+  #cta {
+    background-image: url("../imgs/bg-simplify-section.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+}
+
+/*----- Features Section -----*/
+#features {
+  background-image: url("../imgs/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: -30% -20%;
+}
+
+@media (max-width: 768px) {
+  #features {
+    background-image: none;
+  }
+}
+
+/*----- Hamburger icon -----*/
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  position: relative;
+}
+
+/*----- Hamburger icon <Items> -----*/
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  background-color: black;
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  margin-top: 2.5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+  -webkit-transform: translateY(7px);
+  -moz-transform: translateY(7px);
+  -ms-transform: translateY(7px);
+  -o-transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+  -webkit-transform: translateY(14px);
+  -moz-transform: translateY(14px);
+  -ms-transform: translateY(14px);
+  -o-transform: translateY(14px);
+}
+
+/*----- Hamburger icon <Close effect> -----*/
+.open {
+  transform: rotate(90deg), translateY(0px);
+  -webkit-transform: rotate(90deg), translateY(0px);
+  -moz-transform: rotate(90deg), translateY(0px);
+  -ms-transform: rotate(90deg), translateY(0px);
+  -o-transform: rotate(90deg), translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  -webkit-transform: rotate(45deg) translateY(6px) translateX(6px);
+  -moz-transform: rotate(45deg) translateY(6px) translateX(6px);
+  -ms-transform: rotate(45deg) translateY(6px) translateX(6px);
+  -o-transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  -webkit-transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  -moz-transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  -ms-transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  -o-transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+/*----- Input Field -----*/
+input[type="text"]::placeholder {
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+input[type="text"]:focus::placeholder {
+  opacity: 0;
+}
+
+/*----- Send icon for <Hero section> -----*/
+.bxs-paper-plane {
+  font-size: 18px;
+}
+
+/*----- Footer Section -----*/
+footer {
+  background-image: -webkit-linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../imgs/bg-footer-noise.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../imgs/bg-footer-noise.jpg");
+  background-repeat: repeat-x, repeat;
+  background-size: 100px 15px, 140px 140px;
+}
+
+.bxl-facebook-square,
+.bxl-youtube,
+.bxl-twitter,
+.bxl-instagram-alt {
+  margin-top: 6px;
+  font-size: 32px;
+}
