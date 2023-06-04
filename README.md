@@ -1,6 +1,6 @@
 # Manage Landing Page
 
-# A smooth landing page, designed by using Tailwindcss framework.
+## A smooth landing page, designed by using Tailwindcss framework.
 
 ## Screenshot:
 
